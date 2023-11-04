@@ -1,7 +1,7 @@
 package vn.edu.iuh.fit.www_lab_07.backend.models;
 
 import jakarta.persistence.*;
-import vn.edu.iuh.fit.backend.enums.ProductStatus;
+import vn.edu.iuh.fit.www_lab_07.backend.enums.ProductStatus;
 
 import java.util.ArrayList;
 import java.util.List;

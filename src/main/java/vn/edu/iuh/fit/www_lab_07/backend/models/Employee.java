@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import jakarta.persistence.*;
-import vn.edu.iuh.fit.backend.enums.EmployeeStatus;
+import vn.edu.iuh.fit.www_lab_07.backend.enums.EmployeeStatus;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

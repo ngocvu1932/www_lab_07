@@ -1,7 +1,7 @@
 package vn.edu.iuh.fit.www_lab_07.backend.models;
 
 import jakarta.persistence.*;
-import vn.edu.iuh.fit.backend.pks.ProductPricePK;
+import vn.edu.iuh.fit.www_lab_07.backend.pks.ProductPricePK;
 
 import java.time.LocalDateTime;
 

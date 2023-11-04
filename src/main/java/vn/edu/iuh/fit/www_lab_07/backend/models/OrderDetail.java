@@ -1,7 +1,7 @@
 package vn.edu.iuh.fit.www_lab_07.backend.models;
 
 import jakarta.persistence.*;
-import vn.edu.iuh.fit.backend.pks.OrderDetailPK;
+import vn.edu.iuh.fit.www_lab_07.backend.pks.OrderDetailPK;
 
 @Entity
 @Table(name = "order_detail")
