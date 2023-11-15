@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<h1 class="text-center m-4">Danh sách sản phẩm</h1>
+    <div th:switch="${list_product}">
+        <h2 th:case="null" > Not product </h2>
+        <div th:case="*">
+            <table class="table table-bordered table-hover" >
+                <thead>
+                    <tr>
+                        <th> ID  </th>
+                        <th> Name  </th>
+                        <th> Manufacturer Name  </th>
+                        <th> Description  </th>
+                        <th> Status  </th>
+                        <th> Unit  </th>
+                        <th> Options  </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="product:${list_product}">
+                        <td th:text="${product.getProduct_id()}">  </td>
+                        <td th:text="${product.getName()}">  </td>
+                        <td th:text="${product.getManufacturer()}">  </td>
+                        <td th:text="${product.getDescription()}">  </td>
+                        <td th:text="${product.getStatus()}">  </td>
+                        <td th:text="${product.getUnit()}">  </td>
+                        <td>
+                            <a class="btn btn-primary" th:href="@{/edit_product/{id}(id=${product.getProduct_id()})}">Edit</a>
+                            <a class="btn btn-danger" th:href="@{/delete_product/{id}(id=${product.getProduct_id()})}">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

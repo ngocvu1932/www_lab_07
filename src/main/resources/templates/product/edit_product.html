@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉnh sửa sản phẩm</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css">
+
+    <style>
+        #div_size  {
+            position: absolute;
+            height: 400px;
+            width: 800px;
+            border: 2px solid coral;
+            text-align: center;
+            top: 100px;
+            left: 370px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body >
+    <h1 class="text-center m-4"> Chỉnh sửa sản phẩm </h1>
+    <div id="div_size">
+        <form class=" m-4" action="/editPro" method="post" th:object="${product}">
+            <label th:for="id"> ID: </label>
+            <label th:text="${product.getProduct_id()}"></label> <br> <br>
+
+            <label th:for="name"> Name: </label>
+            <input th:id="name" th:field="*{name}"> <br> <br>
+
+            <label th:for="manu"> Manufacturer Name: </label>
+            <input th:id="manu" th:field="*{manufacturer}"> <br> <br>
+
+            <label th:for="disc"> Description: </label>
+            <input th:id="disc" th:field="*{description}"> <br> <br>
+
+            <label th:for="prosts"> Status: </label>
+            <select th:id="prosts" th:field="*{status}">
+                <option th:each="pst : ${productStatus}" th:value="${pst}" th:text="${pst}" ></option>
+            </select>
+
+            <br> <br>
+
+            <label th:for="unit"> Unit: </label>
+            <input th:id="unit" th:field="*{unit}"> <br> <br>
+
+            <button type="submit" class="btn btn-primary"> Submit </button>
+            <button type="reset" class="btn btn-danger"> Reset </button>
+        </form>
+
+    </div>
+
+</body>
+</html>
