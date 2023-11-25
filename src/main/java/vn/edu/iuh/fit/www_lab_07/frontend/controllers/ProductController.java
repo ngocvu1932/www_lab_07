@@ -28,7 +28,7 @@ public class ProductController {
     }
 
     @GetMapping("/edit_product/{id}")
-    public String editPro(@PathVariable("id") Long id, Model model) {
+    public String loadEditPro(@PathVariable("id") Long id, Model model) {
         Optional<Product> op =  productService.findPro(id);
         Product product= op.get();
         model.addAttribute("product", product );
@@ -47,7 +47,6 @@ public class ProductController {
     @PostMapping("/editPro")
     public String editProduct(@ModelAttribute("product") Product product) {
             Product productExist = productService.findPro(product.getProduct_id()).orElse(null);
-
 
             if (productExist!= null) {
                 productExist.setName(product.getName());
