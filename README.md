@@ -1,5 +1,6 @@
 "# www_lab_07" 
-  implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	//depen
+  	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
