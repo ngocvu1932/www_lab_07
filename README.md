@@ -22,3 +22,19 @@
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 	implementation 'org.projectlombok:lombok:1.18.28'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+
+ 	//properties
+  	spring.security.user.name=user
+	spring.security.user.password=123
+	spring.main.allow-circular-references=true
+	
+	spring.datasource.url=jdbc:h2:mem:dbXeThiCK
+	spring.datasource.driver-class-name=org.h2.Driver
+	spring.datasource.username=sa
+	spring.datasource.password=123
+	spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+	
+	spring.jpa.hibernate.ddl-auto=create-drop
+	spring.jpa.show-sql=true
+	spring.h2.console.enabled=true
